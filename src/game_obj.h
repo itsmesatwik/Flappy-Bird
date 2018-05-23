@@ -1,4 +1,5 @@
 #include "ofMain.h"
+#include <tuple>
 
 class GameObj {
 private:
@@ -11,7 +12,7 @@ public:
 	GameObj();
 	~GameObj();
 	void update();
-	void resize();
+	void resize(int w, int h);
 	ofImage getImage();
 	ofVec2f getPos();
 	std::tuple<int, int> getDims();
