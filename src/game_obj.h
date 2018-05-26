@@ -2,7 +2,7 @@
 #include <tuple>
 
 class GameObj {
-private:
+protected:
 	ofImage obj_image_;
 	ofVec2f position_;
 	float height_;
@@ -11,6 +11,9 @@ private:
 public:
 	GameObj();
 	~GameObj();
+	void setDims(float width, float height);
+	void setPos(ofVec2f pos);
+	void setImage(ofImage img);
 	void update();
 	void resize(int w, int h);
 	ofImage getImage();
